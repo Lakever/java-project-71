@@ -11,10 +11,12 @@ repositories {
 }
 
 dependencies {
-    // Используем BOM для JUnit Jupiter
+
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation("info.picocli:picocli:4.6.3")
 }
+
 
 tasks.test {
     useJUnitPlatform() // Используем платформу JUnit 5
