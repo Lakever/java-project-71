@@ -1,4 +1,5 @@
 package hexlet.code;
+import hexlet.code.Differ;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -27,25 +28,36 @@ public class App implements Runnable {
 
     @Override
     public void run() {
+//        try {
+//            System.out.println("Comparing files...");
+//            System.out.println("Format: " + format);
+//            System.out.println("File1: " + filePath1);
+//            System.out.println("File2: " + filePath2);
+//
+//            Map<String, Object> data1 = Parser.pars(filePath1);
+//            Map<String, Object> data2 = Parser.pars(filePath2);
+//
+//            System.out.println("\nFile 1 content:");
+//            data1.forEach((key, value) -> System.out.println(key + " = " + value));
+//
+//            System.out.println("\nFile 2 content:");
+//            data2.forEach((key, value) -> System.out.println(key + " = " + value));
+//
+//        } catch (IOException e) {
+//            System.err.println("Error: " + e.getMessage());
+//            System.exit(1);
+//        }
+
+
+
+// Пути до файлов передаются в метод в виде строк
+        String diff = null;
         try {
-            System.out.println("Comparing files...");
-            System.out.println("Format: " + format);
-            System.out.println("File1: " + filePath1);
-            System.out.println("File2: " + filePath2);
-
-            Map<String, Object> data1 = Parser.pars(filePath1);
-            Map<String, Object> data2 = Parser.pars(filePath2);
-
-            System.out.println("\nFile 1 content:");
-            data1.forEach((key, value) -> System.out.println(key + " = " + value));
-
-            System.out.println("\nFile 2 content:");
-            data2.forEach((key, value) -> System.out.println(key + " = " + value));
-
+            diff = Differ.generate(filePath1, filePath2);
         } catch (IOException e) {
-            System.err.println("Error: " + e.getMessage());
-            System.exit(1);
+            throw new RuntimeException(e);
         }
+        System.out.println(diff);
     }
 
     public static void main(String[] args) {
