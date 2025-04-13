@@ -1,11 +1,21 @@
+
 plugins {
     java // Подключаем плагин для Java
     application // Подключаем плагин application
     checkstyle
+    id("org.sonarqube") version "6.1.0.5360"
 }
 
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
+
+sonar {
+    properties {
+        property("sonar.projectKey", "Lakever_java-project-71")
+        property("sonar.organization", "lakever")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
+}
 
 repositories {
     mavenCentral() // Используем Maven Central для зависимостей
@@ -24,6 +34,8 @@ dependencies {
 tasks.test {
     useJUnitPlatform() // Используем платформу JUnit 5
 }
+
+
 
 application {
     mainClass.set("hexlet.code.App") // Указываем главный класс
