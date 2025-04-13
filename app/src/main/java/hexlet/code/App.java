@@ -1,5 +1,4 @@
 package hexlet.code;
-import hexlet.code.Differ;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -7,13 +6,13 @@ import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
 import java.io.IOException;
-import java.util.Map;
+import java.util.concurrent.Callable;
 
 @Command(name = "gendiff",
         mixinStandardHelpOptions = true,
         version = "gendiff 1.0",
         description = "Compares two configuration files and shows a difference.")
-public class App implements Runnable {
+public class App implements Callable<Integer> {
 
     @Option(names = {"-f", "--format"},
             description = "Output format (default: ${DEFAULT-VALUE})",
@@ -27,38 +26,17 @@ public class App implements Runnable {
     private String filePath2;
 
     @Override
-    public void run() {
-//        try {
-//            System.out.println("Comparing files...");
-//            System.out.println("Format: " + format);
-//            System.out.println("File1: " + filePath1);
-//            System.out.println("File2: " + filePath2);
-//
-//            Map<String, Object> data1 = Parser.pars(filePath1);
-//            Map<String, Object> data2 = Parser.pars(filePath2);
-//
-//            System.out.println("\nFile 1 content:");
-//            data1.forEach((key, value) -> System.out.println(key + " = " + value));
-//
-//            System.out.println("\nFile 2 content:");
-//            data2.forEach((key, value) -> System.out.println(key + " = " + value));
-//
-//        } catch (IOException e) {
-//            System.err.println("Error: " + e.getMessage());
-//            System.exit(1);
-//        }
-
-
-
-// Пути до файлов передаются в метод в виде строк
-        String diff = null;
+    public Integer call() {  // Заменяем run() на call()
         try {
-            diff = Differ.generate(filePath1, filePath2);
+            String diff = Differ.generate(filePath1, filePath2);
+            System.out.println(diff);
+            return 0;  // Возвращаем 0 при успехе
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.err.println("Error: " + e.getMessage());
+            return 1;  // Возвращаем 1 при ошибке
         }
-        System.out.println(diff);
     }
+
 
     public static void main(String[] args) {
         int exitCode = new CommandLine(new App()).execute(args);
