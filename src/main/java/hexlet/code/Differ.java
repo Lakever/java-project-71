@@ -14,7 +14,7 @@ public class Differ {
         list.addAll(data1.keySet());
         list.addAll(data2.keySet());
 
-        list.sort((s1, s2) -> s1.compareTo(s2)); // сортирую по алфавиту
+        list.sort(Comparator.naturalOrder()); // сортирую по алфавиту
 //        String res = list.toString();
 // ok тееперь ключи отсортированы, дальше по этим ключам делать разницу значений этих ключей
         StringBuilder result = new StringBuilder("{\n");
@@ -32,10 +32,10 @@ public class Differ {
                 result.append("-").append(item).append(": ").append(data1.get(item)).append("\n");
                 result.append("+").append(item).append(": ").append(data2.get(item)).append("\n");
             } else {
-                result.append(" ").append(item).append(": ").append(data1.get(item)).append("\n");
+                result.append(" ").append(item).append(": ").append(data1.get(item));
             }
         }
-        result.append("\n }");
+        result.append("\n}");
         return result.toString();
     }
 }

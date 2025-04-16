@@ -33,7 +33,7 @@ public class App implements Callable<Integer> {
             return 0;  // Возвращаем 0 при успехе
         } catch (IOException e) {
             System.err.println("Error: " + e.getMessage());
-            return 1;  // Возвращаем 1 при ошибке
+            return 1;  //  1 при ошибке
         }
     }
 
