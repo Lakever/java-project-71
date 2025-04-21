@@ -25,10 +25,10 @@ public class Parser {
 
         String content = Files.readString(path); // reading ffile
 
-        ObjectMapper mapper = new ObjectMapper();// объект парсера
+        ObjectMapper mapper = new ObjectMapper(); // объект парсера
         Map<String, Object> map = new HashMap<>();
         // парсим прочитанное в файле и заносим в map
-        map = mapper.readValue(content, new TypeReference<Map<String, Object>>() {}); // parsing
+        map = mapper.readValue(content, new TypeReference<Map<String, Object>>() { }); // parsing
 
         return map;
     }

@@ -9,6 +9,10 @@ plugins {
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
 
+tasks.test {
+    useJUnitPlatform()
+}
+
 repositories {
     mavenCentral()
 }

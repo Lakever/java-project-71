@@ -1,7 +1,11 @@
+package hexlet.code;
+
 import org.junit.jupiter.api.Test;
 
 import static hexlet.code.Parser.pars;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -42,6 +46,4 @@ public class ParserTest {
 
         System.out.println("Test passed successfully for file: " + testFileName);
     }
-
-
 }
