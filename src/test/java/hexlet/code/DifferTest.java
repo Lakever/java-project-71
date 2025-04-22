@@ -23,12 +23,24 @@ public class DifferTest {
         return result.trim();
     }
     @Test
-    public void testingGenerate() throws IOException {
+    public void testingGenerateJson() throws IOException {
         System.out.println("START");
 //        var filePath = getFixturePath("DefferTest.txt"); // получили путь
-        var expected = readFixture("DifferTest.txt");
+        var expected = readFixture("DifferTestJson.txt");
         var filePath1 = getFixturePath("file1.json").toString();
         var filePath2 = getFixturePath("file2.json").toString();
+
+        System.out.println(expected);
+        var actual = generate(filePath1, filePath2);
+        assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
+    }
+    @Test
+    public void testingGenerateYaml() throws IOException {
+        System.out.println("START");
+//        var filePath = getFixturePath("DefferTest.txt"); // получили путь
+        var expected = readFixture("DifferTestYaml.txt");
+        var filePath1 = getFixturePath("file1Test.yaml").toString();
+        var filePath2 = getFixturePath("file2Test.yaml").toString();
 
         System.out.println(expected);
         var actual = generate(filePath1, filePath2);
