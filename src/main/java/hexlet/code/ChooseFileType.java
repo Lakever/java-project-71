@@ -22,6 +22,6 @@ public class ChooseFileType {
         } else {
             throw new IOException("Unsupported file format: " + path);
         }
-        return mapper.readValue(content, new TypeReference<>() {});
+        return mapper.readValue(content, new TypeReference<>() {}); // Тут парсинг идёт
     }
 }

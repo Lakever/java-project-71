@@ -6,6 +6,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 
+/**
+ * Класс отвечает за чтение файла и выбор подходящего парсера (JSON или YAML).
+ * Используется в {@link Parser} для обработки входных конфигурационных файлов.
+ */
 public class Parser {
     public static Map<String, Object> pars(String way) throws IOException {
         Path path = Paths.get(way).toAbsolutePath().normalize();
