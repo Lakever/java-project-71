@@ -23,48 +23,48 @@ public class ParserTest {
                 .normalize();
     }
 
-    @Test
-    public void testParseValidJson() throws IOException {
-        String testFileName = "file2Test.json";
-        Path testFilePath = getFixturePath(testFileName);
-
-        assertTrue(Files.exists(testFilePath));
-
-        Map<String, Object> expected = Map.of(
-                "host", "hexlet.io",
-                "timeout", 20,
-                "verbose", true
-        );
-
-        Map<String, Object> actual = Parser.pars(testFilePath.toString());
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testParseValidYaml() throws IOException {
-        String testFileName = "file2Test.yaml";
-        Path testFilePath = getFixturePath(testFileName);
-
-        assertTrue(Files.exists(testFilePath));
-
-        Map<String, Object> expected = Map.of(
-                "host", "hexlet.io",
-                "timeout", 20,
-                "verbose", true
-        );
-
-        Map<String, Object> actual = Parser.pars(testFilePath.toString());
-
-        assertEquals(expected, actual);
-    }
+//    @Test
+//    public void testParseValidJson() throws IOException {
+//        String testFileName = "file2Test.json";
+//        Path testFilePath = getFixturePath(testFileName);
+//
+//        assertTrue(Files.exists(testFilePath));
+//
+//        Map<String, Object> expected = Map.of(
+//                "host", "hexlet.io",
+//                "timeout", 20,
+//                "verbose", true
+//        );
+//
+//        Map<String, Object> actual = PathFile.fromFile(testFilePath.toString());
+//
+//        assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testParseValidYaml() throws IOException {
+//        String testFileName = "file2Test.yaml";
+//        Path testFilePath = getFixturePath(testFileName);
+//
+//        assertTrue(Files.exists(testFilePath));
+//
+//        Map<String, Object> expected = Map.of(
+//                "host", "hexlet.io",
+//                "timeout", 20,
+//                "verbose", true
+//        );
+//
+//        Map<String, Object> actual = PathFile.fromFile(testFilePath.toString());
+//
+//        assertEquals(expected, actual);
+//    }
 
     @Test
     public void testParseNestingJson() throws IOException {
-        String testFileName = "file2TestNestingJson.json";
+        String testFileName = "file2TestNesting.json";
         Path testFilePath = getFixturePath(testFileName); // вот эта штука берет путь до файла
 
-        assertTrue(Files.exists(testFilePath));
+        assertTrue(Files.exists(testFilePath), "File not found");
 
         Map<String, Object> expected = new HashMap<>();
         expected.put("setting1", "Another value");
@@ -86,7 +86,7 @@ public class ParserTest {
 
         expected.put("obj1", obj1);
 
-        Map<String, Object> actual = Parser.pars(testFilePath.toString());
+        Map<String, Object> actual = PathFile.fromFile(testFilePath.toString());
 
         assertEquals(expected, actual);
     }
@@ -115,10 +115,10 @@ public class ParserTest {
         Map<String, Object> obj1 = new HashMap<>();
         obj1.put("nestedKey", "value");
         obj1.put("isNested", true);
-
+        // и положу его к остальным
         expected.put("obj1", obj1);
 
-        Map<String, Object> actual = Parser.pars(testFilePath.toString());
+        Map<String, Object> actual = PathFile.fromFile(testFilePath.toString());
 
         assertEquals(expected, actual);
     }

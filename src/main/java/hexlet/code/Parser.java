@@ -1,26 +1,28 @@
 package hexlet.code;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Map;
 
-/**
- * Класс отвечает за чтение файла и выбор подходящего парсера (JSON или YAML).
- * Используется в {@link Parser} для обработки входных конфигурационных файлов.
- */
 public class Parser {
-    public static Map<String, Object> pars(String way) throws IOException {
-        Path path = Paths.get(way).toAbsolutePath().normalize();
 
-        if (!Files.exists(path)) {
-            throw new IOException("File not found: " + path);
-        }
-        if (Files.isDirectory(path)) {
-            throw new IOException("Path is a directory: " + path);
+    public static Map<String, Object> pars(Path path) throws IOException {
+        String content = Files.readString(path);
+        ObjectMapper mapper;
+
+        if (path.toString().endsWith(".json")) {
+            mapper = new ObjectMapper();
+        } else if (path.toString().endsWith(".yaml") || path.toString().endsWith(".yml")) {
+            mapper = new YAMLMapper();
+        } else {
+            throw new IOException("Unsupported file format: " + path);
         }
 
-        return ChooseFileType.fromFile(path);
+        return mapper.readValue(content, new TypeReference<>() {}); // Тут парсинг идёт
     }
 }
