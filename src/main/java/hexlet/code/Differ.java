@@ -17,7 +17,7 @@ public class Differ {
     private static String generateDiff(Map<String, Object> data1, Map<String, Object> data2, int depth) {
         StringBuilder result = new StringBuilder();
         String indent = "  ".repeat(depth);      // базовый отступ
-        String markerIndent = indent.substring(2); // отступ до +/-
+        String markerIndent = indent.substring(2); // отступ до знака
 
         result.append(indent.substring(2)).append("{\n");
 
