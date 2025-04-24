@@ -13,13 +13,13 @@ public class Differ {
         return generateDiff(data1, data2, 1);
     }
 
+    @SuppressWarnings("unchecked")
     private static String generateDiff(Map<String, Object> data1, Map<String, Object> data2, int depth) {
         StringBuilder result = new StringBuilder();
-        // Отступы в зависимости от вложенности
-        String indent = "  ".repeat(depth);
-        String baseIndent = "  ".repeat(depth - 1);
+        String indent = "  ".repeat(depth);      // базовый отступ
+        String markerIndent = indent.substring(2); // отступ до +/-
 
-        result.append(baseIndent).append("{\n");
+        result.append(indent.substring(2)).append("{\n");
 
         TreeSet<String> keys = new TreeSet<>();
         keys.addAll(data1.keySet());
@@ -30,24 +30,25 @@ public class Differ {
             Object val2 = data2.get(key);
 
             if (!data2.containsKey(key)) {
-                result.append(indent).append("- ").append(key).append(": ").append(val1).append("\n");
+                result.append(markerIndent).append("  - ").append(key).append(": ").append(val1).append("\n");
             } else if (!data1.containsKey(key)) {
-                result.append(indent).append("+ ").append(key).append(": ").append(val2).append("\n");
+                result.append(markerIndent).append("  + ").append(key).append(": ").append(val2).append("\n");
             } else if (isNested(val1, val2)) {
                 String nested = generateDiff((Map<String, Object>) val1, (Map<String, Object>) val2, depth + 2);
                 result.append(indent).append("  ").append(key).append(": ").append(nested).append("\n");
-            } else if (!val1.equals(val2)) {
-                result.append(indent).append(" - ").append(key).append(": ").append(val1).append("\n");
-                result.append(indent).append(" + ").append(key).append(": ").append(val2).append("\n");
+            } else if (!Objects.equals(val1, val2)) {
+                result.append(markerIndent).append("  - ").append(key).append(": ").append(val1).append("\n");
+                result.append(markerIndent).append("  + ").append(key).append(": ").append(val2).append("\n");
             } else {
-                result.append(indent).append("   ").append(key).append(": ").append(val1).append("\n");
+                result.append(indent).append("  ").append(key).append(": ").append(val1).append("\n");
             }
         }
-        result.append(baseIndent).append("}");
+
+        result.append(indent.substring(2)).append("}");
         return result.toString();
     }
 
     private static boolean isNested(Object val1, Object val2) {
-        return val1 instanceof Map && val2 instanceof Map; // Мы убедились, что объект вложенный и имеет Map
+        return val1 instanceof Map && val2 instanceof Map;
     }
 }
