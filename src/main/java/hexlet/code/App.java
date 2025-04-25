@@ -28,7 +28,7 @@ public class App implements Callable<Integer> {
     @Override
     public Integer call() {  // Заменяем run() на call()
         try {
-            String diff = Differ.generate(filePath1, filePath2);
+            String diff = Differ.generate(filePath1, filePath2, format);
             System.out.println(diff);
             return 0;  // Возвращаем 0 при успехе
         } catch (IOException e) {

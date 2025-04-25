@@ -31,8 +31,13 @@ public class DifferTest {
         var filePath2 = getFixturePath("file2.json").toString();
 
         System.out.println(expected);
-        var actual = generate(filePath1, filePath2);
+        var style = "stylish";
+        var actual = generate(filePath1, filePath2, style);
         assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
+
+        var style1 = "plain";
+        var actual1 = generate(filePath1, filePath2, style1);
+        assertEquals(expected, actual1, "Something wrong LOOOOOOOOOOOL");
     }
     @Test
     public void testingGenerateYaml() throws IOException {
@@ -43,7 +48,13 @@ public class DifferTest {
         var filePath2 = getFixturePath("file2Test.yaml").toString();
 
         System.out.println(expected);
-        var actual = generate(filePath1, filePath2);
+
+        var style = "stylish";
+        var actual = generate(filePath1, filePath2, style);
         assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
+
+        var style1 = "plain";
+        var actual1 = generate(filePath1, filePath2, style1);
+        assertEquals(expected, actual1, "Something wrong LOOOOOOOOOOOL");
     }
 }
