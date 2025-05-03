@@ -3,7 +3,7 @@ package hexlet.code;
 import java.io.IOException;
 import java.util.*;
 
-import static hexlet.code.Format.buildFormat;
+import static hexlet.code.Formatter.buildFormat;
 
 public class Differ {
 

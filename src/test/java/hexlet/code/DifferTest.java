@@ -34,11 +34,8 @@ public class DifferTest {
         var style = "stylish";
         var actual = generate(filePath1, filePath2, style);
         assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
-
-        var style1 = "plain";
-        var actual1 = generate(filePath1, filePath2, style1);
-        assertEquals(expected, actual1, "Something wrong LOOOOOOOOOOOL");
     }
+
     @Test
     public void testingGenerateYaml() throws IOException {
         System.out.println("START");
@@ -52,9 +49,72 @@ public class DifferTest {
         var style = "stylish";
         var actual = generate(filePath1, filePath2, style);
         assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
-
-        var style1 = "plain";
-        var actual1 = generate(filePath1, filePath2, style1);
-        assertEquals(expected, actual1, "Something wrong LOOOOOOOOOOOL");
     }
+
+    @Test
+    public void testingGenerateYamltoPlain() throws IOException {
+        System.out.println("START");
+//        var filePath = getFixturePath("DefferTest.txt"); // получили путь
+        var expected = readFixture("DifferTestPlain.txt");
+        var filePath1 = getFixturePath("file1TestNestingYaml.yaml").toString();
+        var filePath2 = getFixturePath("file2TestNestingYaml.yaml").toString();
+
+        System.out.println(expected);
+
+        var style = "plain";
+        var actual = generate(filePath1, filePath2, style);
+        assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
+
+    }
+
+    @Test
+    public void testingGenerateJsontoPlain() throws IOException {
+        System.out.println("START");
+//        var filePath = getFixturePath("DefferTest.txt"); // получили путь
+        var expected = readFixture("DifferTestPlain.txt");
+        var filePath1 = getFixturePath("file1TestNesting.json").toString();
+        var filePath2 = getFixturePath("file2TestNesting.json").toString();
+
+        System.out.println(expected);
+
+        var style = "plain";
+        var actual = generate(filePath1, filePath2, style);
+        assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
+
+    }
+
+    @Test
+    public void testingGenerateJsonToJsonFormat() throws IOException {
+        System.out.println("START");
+//        var filePath = getFixturePath("DefferTest.txt"); // получили путь
+        var expected = readFixture("DifferTestJsonToJson.txt");
+        var filePath1 = getFixturePath("file1TestNesting.json").toString();
+        var filePath2 = getFixturePath("file2TestNesting.json").toString();
+
+        System.out.println(expected);
+
+        var style = "json";
+        var actual = generate(filePath1, filePath2, style);
+        assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
+
+    }
+
+    @Test
+    public void testingGenerateYamlToJsonFormat() throws IOException {
+        System.out.println("START");
+//        var filePath = getFixturePath("DefferTest.txt"); // получили путь
+        var expected = readFixture("DifferTestJsonToJson.txt");
+        var filePath1 = getFixturePath("file1TestNestingYaml.yaml").toString();
+        var filePath2 = getFixturePath("file2TestNestingYaml.yaml").toString();
+
+        System.out.println(expected);
+
+        var style = "json";
+        var actual = generate(filePath1, filePath2, style);
+        assertEquals(expected, actual, "Something wrong LOOOOOOOOOOOL");
+
+    }
+
+
+
 }

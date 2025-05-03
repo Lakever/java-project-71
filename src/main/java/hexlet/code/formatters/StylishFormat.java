@@ -1,21 +1,10 @@
-package hexlet.code;
+package hexlet.code.formatters;
+
+import hexlet.code.DiffChange;
 
 import java.util.List;
 
-
-
-public class Format {
-
-    public static String buildFormat(List<DiffChange> differ, int depth, String style) {
-        switch (style) {
-            case "stylish" -> {
-                return stylishFormat(differ, depth);
-            }
-            default -> throw new IllegalArgumentException("Unsupported style: " + style);
-
-        }
-    }
-
+public class StylishFormat {
     public static String stylishFormat(List<DiffChange> differ, int depth) {
         StringBuilder builder = new StringBuilder();
         String indent = "  ".repeat(depth);
@@ -44,5 +33,4 @@ public class Format {
         builder.append(markerIndent).append("}");
         return builder.toString();
     }
-
 }
