@@ -7,7 +7,6 @@ public class DiffChange {
     private String typeChange;
     private Object oldValue;
     private Object newValue;
-    private Object value;
     private List<DiffChange> children;
 
     public DiffChange(String key, String typeChange, Object oldValue,
@@ -27,7 +26,10 @@ public class DiffChange {
         return typeChange;
     }
     public Object getValue() {
-        return value;
+        if ("unchanged".equals(typeChange)) {
+            return oldValue;
+        }
+        return null;
     }
 
     public Object getOldValue() {

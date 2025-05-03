@@ -4,13 +4,10 @@ import hexlet.code.DiffChange;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public class PlainFormat {
     public static String plainFormat(List<DiffChange> differ, int depth) {
         StringBuilder builder = new StringBuilder();
-        String indent = "  ".repeat(depth);
-        String markerIndent = indent.substring(2);
 
         for (var item : differ) {
             String key = item.getKey();
@@ -20,12 +17,25 @@ public class PlainFormat {
             var children = item.getChildren();
 
             switch (typeChange) {
-                case "added" -> builder.append("Property '").append(key).append("' was added with value: ").append(som(newValue)).append("\n");
-                case "removed" -> builder.append("Property '").append(key).append("' was removed").append("\n");
+                case "added" -> builder.append("Property '")
+                        .append(key)
+                        .append("' was added with value: ")
+                        .append(som(newValue)).append("\n");
+                case "removed" -> builder.append("Property '")
+                        .append(key)
+                        .append("' was removed").append("\n");
                 case "changed" -> {
-                    builder.append("Property '").append(key).append("' was updated. From ").append(som(oldValue)).append(" to ").append(som(newValue)).append("\n");
+                    builder.append("Property '").append(key)
+                            .append("' was updated. From ").append(som(oldValue))
+                            .append(" to ")
+                            .append(som(newValue)).append("\n");
                 }
-                case "nested" -> builder.append("Property '").append(key).append("' was updated. From ").append(som(children)).append("\n");
+                case "nested" -> builder.append("Property '")
+                        .append(key)
+                        .append("' was updated. From ").append(som(children)).append("\n");
+                default -> {
+                    String def = "";
+                }
             }
         }
         return builder.toString().trim();
@@ -40,8 +50,7 @@ public class PlainFormat {
             return value.toString();
         } else if (value instanceof Map || value instanceof List) {
             return "[complex value]";
-        }
-        else {
+        } else {
             return value.toString();
         }
     }

@@ -12,11 +12,19 @@ import java.util.Map;
  */
 public class PathFile {
     public static Map<String, Object> fromFile(String way) throws IOException {
-        Path path = Paths.get(way).toAbsolutePath().normalize();
+        Path path = Paths.get(way);
+
+        // Если указанный путь не существует — пробуем src/main/resources/files/
+        if (!Files.exists(path)) {
+            path = Paths.get("src/main/resources/files", way);
+        }
+
+        path = path.toAbsolutePath().normalize();
 
         if (!Files.exists(path)) {
             throw new IOException("File not found: " + path);
         }
+
         if (Files.isDirectory(path)) {
             throw new IOException("Path is a directory: " + path);
         }

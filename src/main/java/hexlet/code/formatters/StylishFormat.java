@@ -20,14 +20,45 @@ public class StylishFormat {
             var children = item.getChildren();
 
             switch (typeChange) {
-                case "added" -> builder.append(markerIndent).append("  + ").append(key).append(": ").append(newValue).append("\n");
-                case "removed" -> builder.append(markerIndent).append("  - ").append(key).append(": ").append(oldValue).append("\n");
-                case "unchanged" -> builder.append(indent).append("  ").append(key).append(": ").append(oldValue).append("\n");
+                case "added" -> builder.append(markerIndent)
+                        .append("  + ")
+                        .append(key)
+                        .append(": ")
+                        .append(newValue)
+                        .append("\n");
+                case "removed" -> builder.append(markerIndent)
+                        .append("  - ")
+                        .append(key)
+                        .append(": ")
+                        .append(oldValue)
+                        .append("\n");
+                case "unchanged" -> builder.append(indent)
+                        .append("  ")
+                        .append(key)
+                        .append(": ")
+                        .append(oldValue)
+                        .append("\n");
                 case "changed" -> {
-                    builder.append(markerIndent).append("  - ").append(key).append(": ").append(oldValue).append("\n");
-                    builder.append(markerIndent).append("  + ").append(key).append(": ").append(newValue).append("\n");
+                    builder.append(markerIndent)
+                            .append("  - ").append(key)
+                            .append(": ")
+                            .append(oldValue)
+                            .append("\n");
+                    builder.append(markerIndent)
+                            .append("  + ")
+                            .append(key)
+                            .append(": ")
+                            .append(newValue).append("\n");
                 }
-                case "nested" -> builder.append(markerIndent).append("  ").append(key).append(":  ").append(children).append("\n");
+                case "nested" -> builder.append(markerIndent)
+                        .append("  ")
+                        .append(key)
+                        .append(":  ")
+                        .append(children)
+                        .append("\n");
+                default -> {
+                    String def = "";
+                }
             }
         }
         builder.append(markerIndent).append("}");

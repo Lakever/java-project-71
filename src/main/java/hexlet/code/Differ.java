@@ -1,7 +1,11 @@
 package hexlet.code;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeSet;
+import java.util.List;
+import java.util.Objects;
 
 import static hexlet.code.Formatter.buildFormat;
 
@@ -30,7 +34,7 @@ public class Differ {
                 diff.add(new DiffChange(key, "added", null, val2, null));
             } else if (isNested(val1, val2)) {
                 List<DiffChange> children = build((Map<String, Object>) val1, (Map<String, Object>) val2);
-                diff.add(new DiffChange(key,"nested", null, null, children));
+                diff.add(new DiffChange(key, "nested", null, null, children));
             } else if (!Objects.equals(val1, val2)) {
                 diff.add((new DiffChange(key, "changed", val1, val2, null)));
             } else {

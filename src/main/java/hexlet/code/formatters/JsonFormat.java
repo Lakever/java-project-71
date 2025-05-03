@@ -4,7 +4,6 @@ import hexlet.code.DiffChange;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public class JsonFormat {
 
@@ -18,17 +17,20 @@ public class JsonFormat {
             builder.append("    \"key\": \"").append(item.getKey()).append("\",\n");
             builder.append("    \"type\": \"").append(item.getTypeChange()).append("\"");
 
-            // Для вложенных объектов
-            if ("nested".equals(item.getTypeChange())) {
+
+            if ("nested".equals(item.getTypeChange())) { // Для вложенных объектов
                 builder.append(",\n    \"children\": ").append(jsonFormat(item.getChildren(), depth + 1));
+            } else if ("unchanged".equals(item.getTypeChange())) {
+                builder.append(",\n    \"value\": ").append(stringify(item.getValue()));
+            } else if ("removed".equals(item.getTypeChange())) {
+                builder.append(",\n    \"oldValue\": ").append(stringify(item.getOldValue()));
+            } else if ("added".equals(item.getTypeChange())) {
+                builder.append(",\n    \"newValue\": ").append(stringify(item.getNewValue()));
             } else {
-                if (item.getOldValue() != null) {
-                    builder.append(",\n    \"oldValue\": ").append(stringify(item.getOldValue()));
-                }
-                if (item.getNewValue() != null) {
-                    builder.append(",\n    \"newValue\": ").append(stringify(item.getNewValue()));
-                }
+                builder.append(",\n    \"oldValue\": ").append(stringify(item.getOldValue()));
+                builder.append(",\n    \"newValue\": ").append(stringify(item.getNewValue()));
             }
+
             builder.append("\n  }");
             if (i != differ.size() - 1) {
                 builder.append(",");
@@ -50,7 +52,16 @@ public class JsonFormat {
             return value.toString();
         }
         if (value instanceof List) {
-            return value.toString();
+            List<?> list = (List<?>) value;
+            StringBuilder sb = new StringBuilder("[");
+            for (int i = 0; i < list.size(); i++) {
+                sb.append(stringify(list.get(i)));
+                if (i < list.size() - 1) {
+                    sb.append(", ");
+                }
+            }
+            sb.append("]");
+            return sb.toString();
         }
         if (value instanceof Map) {
             @SuppressWarnings("unchecked")
