@@ -1,14 +1,14 @@
 .gradle
 build/
-!wrapper/gradle-wrapper.jar
+!app/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+app/.idea/modules.xml
+app/.idea/jarRepositories.xml
+app/.idea/compiler.xml
+app/.idea/libraries/
 *.iws
 *.iml
 *.ipr

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="494a5738-40a1-4da5-9eb2-f082fd0d18dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asciinema/demo3.cast" beforeDir="false" afterPath="$PROJECT_DIR$/app/asciinema/demo3.cast" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/checkstyle/checkstyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/checkstyle/checkstyle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/checkstyle/suppressions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/checkstyle/suppressions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/app/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/app/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/DiffChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/DiffChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Differ.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Differ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Formatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Formatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/PathFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/PathFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/formatters/JsonFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatters/JsonFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/formatters/PlainFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatters/PlainFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/formatters/StylishFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatters/StylishFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/file1.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/files/file1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/file1.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/files/file1.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/file1Nested.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/files/file1Nested.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/file1Nested.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/files/file1Nested.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/file2.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/files/file2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/file2.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/files/file2.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/file2Nested.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/files/file2Nested.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/file2Nested.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/files/file2Nested.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hexlet/code/DifferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/DifferTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hexlet/code/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/ParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/DifferTestJson.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/DifferTestJson.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/DifferTestJsonToJson.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/DifferTestJsonToJson.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/DifferTestNestingJson.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/DifferTestNestingJson.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/DifferTestPlain.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/DifferTestPlain.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/DifferTestYaml.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/DifferTestYaml.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file1.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file1Test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file1Test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file1TestNesting.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file1TestNesting.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file1TestNestingYaml.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file1TestNestingYaml.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file2.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file2Test.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file2Test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file2Test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file2Test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file2TestNesting.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file2TestNesting.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect/file2TestNestingYaml.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/DifferTestDirect/file2TestNestingYaml.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/app">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-project-71" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/hexlet/code/Format.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2vUt684cnbRijZ6rHypWY7P1pFB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DifferTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DifferTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DifferTest.testingGenerate.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ParserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ParserTest.isNotDirectory.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.ParserTest.testParseNestingJson.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-project-71 [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-project-71 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-project-71 [installDist].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/nikita/IdeaProjects/java-project-71/src/main/java/hexlet/code&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nikita/IdeaProjects/java-project-71&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/fixtures/json_yaml_test" />
+      <recent name="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect" />
+      <recent name="$PROJECT_DIR$/src/main/resources/fixtures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/asciinema" />
+      <recent name="$PROJECT_DIR$/src/test/resources/fixtures/DifferTestDirect" />
+      <recent name="$PROJECT_DIR$/src/test/resources/fixtures/json_yaml_test" />
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hexlet.code.App" />
+      <module name="java-project-71" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DifferTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hexlet.code.DifferTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ParserTest.testParseNestingJson" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hexlet.code.ParserTest.testParseNestingJson&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="java-project-71 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="java-project-71 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="java-project-71 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="installDist" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Gradle.DifferTest (1)" />
+      <item itemvalue="Gradle.ParserTest.testParseNestingJson" />
+      <item itemvalue="Gradle.java-project-71 [build]" />
+      <item itemvalue="Gradle.java-project-71 [clean]" />
+      <item itemvalue="Gradle.java-project-71 [installDist]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.java-project-71 [build]" />
+        <item itemvalue="Gradle.java-project-71 [installDist]" />
+        <item itemvalue="Gradle.java-project-71 [clean]" />
+        <item itemvalue="Gradle.ParserTest.testParseNestingJson" />
+        <item itemvalue="Gradle.DifferTest (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="494a5738-40a1-4da5-9eb2-f082fd0d18dc" name="Changes" comment="" />
+      <created>1744211301656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744211301656</updated>
+    </task>
+    <servers />
+  </component>
+</project>

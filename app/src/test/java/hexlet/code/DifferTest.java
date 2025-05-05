@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 public class DifferTest {
 
     private static Path getFixturePath(String fileName) {
-        return Paths.get("src", "test", "resources",  "fixtures", "DifferTestDirect", fileName)
+        return Paths.get("src", "test", "resources", "fixtures", "DifferTestDirect", fileName)
                 .toAbsolutePath()
                 .normalize();
     }
