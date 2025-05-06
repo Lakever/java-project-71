@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="494a5738-40a1-4da5-9eb2-f082fd0d18dc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/hexlet-check.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/asciinema/demo3.cast" beforeDir="false" afterPath="$PROJECT_DIR$/asciinema/demo3.cast" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,9 +262,9 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="Gradle./Users/nikita/IdeaProjects/java-project-71" />
       <item itemvalue="Gradle.DifferTest (1)" />
       <item itemvalue="Gradle.ParserTest.testParseNestingJson" />
+      <item itemvalue="Gradle./Users/nikita/IdeaProjects/java-project-71" />
       <item itemvalue="Gradle.java-project-71 [build]" />
       <item itemvalue="Gradle.java-project-71 [clean]" />
       <item itemvalue="Gradle.java-project-71 [installDist]" />
