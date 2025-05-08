@@ -13,14 +13,14 @@ import java.nio.file.Paths;
 
 public class DifferTest {
 
-    private String expectedStylish;
-    private String expectedPlain;
-    private String expectedJson;
+    private static String expectedStylish;
+    private static String expectedPlain;
+    private static String expectedJson;
 
-    private String file1NestedJson;
-    private String file2NestedJson;
-    private String file1NestedYaml;
-    private String file2NestedYaml;
+    private static String file1NestedJson;
+    private static String file2NestedJson;
+    private static String file1NestedYaml;
+    private static String file2NestedYaml;
 
     private static Path getFixturePath(String fileName) {
         return Paths.get("src", "test", "resources", "fixtures", "DifferTestDirect", fileName)
@@ -36,15 +36,15 @@ public class DifferTest {
 
     @BeforeEach
     public void setUp() throws IOException {
-        this.expectedPlain = readFixture("DifferTestPlain.txt");
-        this.expectedStylish = readFixture("DifferTestStylish.txt");
-        this.expectedJson = readFixture("DifferTestJson.txt");
+        expectedPlain = readFixture("DifferTestPlain.txt");
+        expectedStylish = readFixture("DifferTestStylish.txt");
+        expectedJson = readFixture("DifferTestJson.txt");
 
-        this.file1NestedJson = getFixturePath("file1TestNesting.json").toString();
-        this.file2NestedJson = getFixturePath("file2TestNesting.json").toString();
+        file1NestedJson = getFixturePath("file1TestNesting.json").toString();
+        file2NestedJson = getFixturePath("file2TestNesting.json").toString();
 
-        this.file1NestedYaml = getFixturePath("file1TestNesting.yaml").toString();
-        this.file2NestedYaml = getFixturePath("file2TestNesting.yaml").toString();
+        file1NestedYaml = getFixturePath("file1TestNesting.yaml").toString();
+        file2NestedYaml = getFixturePath("file2TestNesting.yaml").toString();
     }
 
     @Test
