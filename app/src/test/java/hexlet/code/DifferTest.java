@@ -48,12 +48,23 @@ public class DifferTest {
     }
 
     @Test
-    public void testStylish() throws IOException { // и здесь у нас будет 1 тест на всё приложение
+    public void testStylishJson() throws IOException { // и здесь у нас будет 1 тест на всё приложение
         var style = "stylish";
         var expected = expectedStylish;
         var actual = generate(file1NestedJson, file2NestedJson, style);
 
         assertEquals(expected, actual);
+    }
+    @Test
+    public void testPlainYaml() throws IOException {
+        String actual = generate(file1NestedYaml, file2NestedYaml, "plain");
+        assertEquals(expectedPlain, actual);
+    }
+
+    @Test
+    public void testJsonFormatJson() throws IOException {
+        String actual = generate(file1NestedJson, file2NestedJson, "json");
+        assertEquals(expectedJson, actual);
     }
 //    private static String exeTest(String fixture, String fileName1, String fileName2, String style) throws IOException {
 //        var filePath1 = getFixturePath(fileName1).toString();
