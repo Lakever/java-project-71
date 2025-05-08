@@ -49,8 +49,9 @@ public class DifferTest {
 
     @Test
     public void testStylish() throws IOException { // и здесь у нас будет 1 тест на всё приложение
+        var style = "stylish";
         var expected = expectedStylish;
-        var actual = generate(file1NestedJson, file2NestedJson, "stylish");
+        var actual = generate(file1NestedJson, file2NestedJson, style);
 
         assertEquals(expected, actual);
     }
