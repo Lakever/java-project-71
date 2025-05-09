@@ -1,2 +1,3 @@
-rootProject.name = "app"
+rootProject.name = "hexlet-project-71"
+include("app")
 
