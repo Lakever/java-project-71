@@ -28,6 +28,7 @@ dependencies {
 
 application {
     mainClass.set("hexlet.code.App")
+    applicationName = "app"
 }
 
 // Генерация отчёта
