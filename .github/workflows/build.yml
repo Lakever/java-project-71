@@ -45,4 +45,4 @@ jobs:
         working-directory: app
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew -x checkstyleTest -x checkstyleMain build sonar --info
+        run: ./gradlew -x checkstyleMain build sonar --info
