@@ -3,7 +3,7 @@ plugins {
     application
     checkstyle
     jacoco
-    id("org.sonarqube") version "6.1.0.5360"
+    id("org.sonarqube") version "6.0.1.5171"
 }
 
 group = "hexlet.code"
@@ -27,7 +27,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("hexlet.code.App")
+    mainClass.set("hexlet.code.app")
     applicationName = "app"
 }
 
@@ -46,6 +46,7 @@ tasks.named("sonar") {
 }
 
 // SonarCloud
+
 sonar {
     properties {
         property("sonar.projectKey", "Lakever_java-project-71")

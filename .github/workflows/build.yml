@@ -4,8 +4,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'app/**'
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - 'app/**'
 
 jobs:
   build:
@@ -34,7 +38,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('app/**/*.gradle*') }}
           restore-keys: ${{ runner.os }}-gradle
 
       - name: Build and analyze
