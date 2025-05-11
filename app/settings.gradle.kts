@@ -1,1 +1,1 @@
-rootProject.name = "hexlet-project-71"
+rootProject.name = "java-project-71"
