@@ -22,8 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Execute Gradle build
-        working-directory: app
-        run: ./gradlew build
+        run: cd app && ./gradlew build
 
       - name: Generate coverage report
         working-directory: app
@@ -44,7 +43,6 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
 
       - name: Build and analyze
-        working-directory: app
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew sonar --info
+        run: cd app && ./gradlew sonar --info
