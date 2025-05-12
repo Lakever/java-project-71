@@ -64,3 +64,4 @@ public class DifferTest {
         assertEquals(expectedJson, actual);
     }
 }
+
