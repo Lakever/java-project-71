@@ -28,6 +28,8 @@ public class DifferTest {
                 .normalize();
     }
 
+
+
     private static String readFixture(String fileName) throws IOException {
         var result = Files.readString(getFixturePath(fileName));
         return result.trim();
