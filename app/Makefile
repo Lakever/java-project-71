@@ -1,6 +1,6 @@
 # Makefile
 
-.PHONY: setup test lint report
+.PHONY: build
 
 setup:
 	./gradlew build
