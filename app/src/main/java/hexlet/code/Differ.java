@@ -11,7 +11,7 @@ import static hexlet.code.Formatter.buildFormat;
 
 public class Differ {
 
-    
+
     public static String generate(String filePath1, String filePath2, String style) throws IOException {
         Map<String, Object> data1 = PathFile.fromFile(filePath1);
         Map<String, Object> data2 = PathFile.fromFile(filePath2);

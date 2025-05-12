@@ -3,7 +3,7 @@
 .PHONY: build
 
 setup:
-	./gradlew build
+	./gradlew clean build
 
 test:
 	./gradlew test
