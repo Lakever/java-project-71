@@ -18,6 +18,9 @@ public class Differ {
         var differ = build(data1, data2);
         return buildFormat(differ, 1, style);
     }
+    public static String generate(String filePath1, String filePath2) throws IOException {
+        return generate(filePath1, filePath2, "stylish");
+    }
 
     public static List<DiffChange> build(Map<String, Object> data1, Map<String, Object> data2) {
         TreeSet<String> keys = new TreeSet<>();
