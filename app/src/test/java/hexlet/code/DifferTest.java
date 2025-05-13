@@ -65,5 +65,15 @@ public final class DifferTest {
         var actual = generate(file1NestedJson, file2NestedJson, "json");
         assertEquals(expectedJson, actual);
     }
+    @Test
+    public void testDefaultFormatJson() throws IOException {
+        var actual = generate(file1NestedJson, file2NestedJson);
+        assertEquals(expectedStylish, actual);
+    }
+    @Test
+    public void testDefaultFormatYaml() throws IOException {
+        var actual = generate(file1NestedYaml, file2NestedYaml);
+        assertEquals(expectedStylish, actual);
+    }
 }
 
