@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.List;
 
-public class DiffChange {
+public final class DiffChange {
     private String key;
     private String typeChange;
     private Object oldValue;
