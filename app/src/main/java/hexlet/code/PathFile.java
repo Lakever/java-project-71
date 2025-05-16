@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,23 +13,31 @@ import java.util.Map;
  */
 public class PathFile {
     public static Map<String, Object> fromFile(String way) throws IOException {
+        ClassLoader classLoader = MyClass.class.getClassLoader();
         Path path = Paths.get(way);
-
-        // Если указанный путь не существует — пробуем src/main/resources/files/
-        if (!Files.exists(path)) {
-            path = Paths.get("src/main/resources/files", way);
-        }
-
         path = path.toAbsolutePath().normalize();
 
-        if (!Files.exists(path)) {
-            throw new IOException("File not found: " + path);
+//        if (!Files.exists(path)) {
+//            throw new IOException("File not found: " + path);
+//        }
+//
+//        if (Files.isDirectory(path)) {
+//            throw new IOException("Path is a directory: " + path);
+//        }
+//
+//        String content = Files.readString(path); // Читает всё содержимое файла в строку.
+//        String format = getFormat(way);
+
+
+        return Parser.pars(content, format);
+    }
+    public static String getFormat(String filePath) {
+        var afterDotIndex = filePath.lastIndexOf(".");
+        if (afterDotIndex == -1) {
+            return "Not found format";
+        } else {
+            return filePath.substring(afterDotIndex + 1).toLowerCase();
         }
 
-        if (Files.isDirectory(path)) {
-            throw new IOException("Path is a directory: " + path);
-        }
-
-        return Parser.pars(path);
     }
 }
