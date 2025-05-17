@@ -1,11 +1,8 @@
 package hexlet.code;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Map;
-import java.util.TreeSet;
-import java.util.List;
-import java.util.Objects;
+
 
 import static hexlet.code.BuildFormat.build;
 import static hexlet.code.Formatter.buildFormat;

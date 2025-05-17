@@ -20,7 +20,7 @@ public class Formatter {
                 return plainFormat(differ, depth);
             }
             case "json" -> {
-                return JsonFormat.jsonFormat(differ, depth);
+                return JsonFormat.jsonFormat(differ);
             }
             default -> throw new IllegalArgumentException("Unsupported style: " + style);
 

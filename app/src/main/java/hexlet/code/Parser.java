@@ -6,8 +6,6 @@ import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Map;
 
 public class Parser {
@@ -17,9 +15,15 @@ public class Parser {
         ObjectMapper mapper;
 
         switch (format.toLowerCase()) {
-            case "stylish" -> mapper = new ObjectMapper();
-            case "yml", "yaml" -> mapper = new YAMLMapper();
-            case "json" -> mapper = new JsonMapper();
+            case "stylish" -> {
+                mapper = new ObjectMapper();
+            }
+            case "yml", "yaml" -> {
+                mapper = new YAMLMapper();
+            }
+            case "json" -> {
+                mapper = new JsonMapper();
+            }
             default -> throw new IOException("Unvaliable format " + format);
         }
 //        if (path.toString().endsWith(".json")) {

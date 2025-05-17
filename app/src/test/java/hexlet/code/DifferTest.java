@@ -49,6 +49,18 @@ public final class DifferTest {
     }
 
     @Test
+    public void testStylishYaml() throws IOException {
+        var actual = generate(file1NestedYaml, file2NestedYaml, "stylish");
+        assertEquals(expectedStylish, actual);
+    }
+
+    @Test
+    public void testJsonYaml() throws IOException {
+        var actual = generate(file1NestedYaml, file2NestedYaml, "json");
+        assertEquals(expectedJson, actual);
+    }
+
+    @Test
     public void testStylishJson() throws IOException {
         var actual = generate(file1NestedJson, file2NestedJson, "stylish");
         assertEquals(expectedStylish, actual);
