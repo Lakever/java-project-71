@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -35,8 +35,8 @@ public final class DifferTest {
         return result.trim();
     }
 
-    @BeforeEach
-    public void setUp() throws IOException {
+    @BeforeAll
+    public static void setUp() throws IOException {
         expectedPlain = readFixture("DifferTestPlain.txt");
         expectedStylish = readFixture("DifferTestStylish.txt");
         expectedJson = readFixture("DifferTestJson.txt");

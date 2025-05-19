@@ -47,10 +47,10 @@ public class PathFile {
 //        return result.trim();
 //    }
 
-    public static String getFormat(String filePath) {
+    public static String getFormat(String filePath) throws IOException {
         var afterDotIndex = filePath.lastIndexOf(".");
         if (afterDotIndex == -1) {
-            return "Not found format";
+            throw new IOException();
         } else {
             return filePath.substring(afterDotIndex + 1).toLowerCase();
         }
