@@ -12,20 +12,6 @@ import java.util.Map;
  */
 public class PathFile {
     public static Map<String, Object> fromFile(String fileName) throws IOException {
-//        ClassLoader classLoader = PathFile.class.getClassLoader();
-//        try (var inputStream = classLoader.getResourceAsStream("files/" + fileName)) {
-//            if (inputStream == null) {
-//                throw new IOException("Resource not found: " + fileName);
-//            }
-//
-//            String content = new String(inputStream.readAllBytes());
-//            String format = getFormat(fileName);
-//            return Parser.pars(content, format);
-//        }
-
-//        var path = getFilesPath(fileName);
-//        String content = Files.readString(path);
-//        return Parser.pars(content, getFormat(fileName));
         Path path = Paths.get(fileName);
         if (!path.isAbsolute()) {
             path = getFilesPath(fileName);
@@ -40,12 +26,6 @@ public class PathFile {
                 .normalize();
     }
 
-
-
-//    private static String readFixture(String fileName) throws IOException {
-//        var result = Files.readString(getFixturePath(fileName));
-//        return result.trim();
-//    }
 
     public static String getFormat(String filePath) throws IOException {
         var afterDotIndex = filePath.lastIndexOf(".");
