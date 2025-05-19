@@ -50,7 +50,7 @@ public class PathFile {
     public static String getFormat(String filePath) throws IOException {
         var afterDotIndex = filePath.lastIndexOf(".");
         if (afterDotIndex == -1) {
-            throw new IOException();
+            throw new IOException("Not found format");
         } else {
             return filePath.substring(afterDotIndex + 1).toLowerCase();
         }
